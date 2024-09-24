@@ -5,27 +5,27 @@
 
 <title>StockPrediction</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
- <!-- Home Button -->
- <a href="index.html" class="home-button">Home</a>
+<!-- Home Button -->
+<a href="index.html" class="home-button">Home</a>
  
  
- <!-- Your existing content goes here -->
+<!-- Your existing content goes here -->
 
 </body>
 
 
 <style type="text/css">
-    pre { line-height: 125%; }
-    .home-button {
-  display: inline-block;
-  padding: 10px 20px;
-  margin: 10px;
-  background-color: #4CAF50;
-  color: white;
-  text-align: center;
-  text-decoration: none;
-  font-size: 16px;
-  border-radius: 5px;
+   pre { line-height: 125%; }
+   .home-button {
+ display: inline-block;
+ padding: 10px 20px;
+ margin: 10px;
+ background-color: #4CAF50;
+ color: white;
+ text-align: center;
+ text-decoration: none;
+ font-size: 16px;
+ border-radius: 5px;
 }
 td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
 span.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
@@ -14597,8 +14597,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Introduction</p>
-<p>In this project, we aim to build a machine learning model to accurately predict the next day's price of the S&amp;P 500 index. Our data comes from the yfinance library and contains daily stock information dating back to 1927, including opening, high, low, and close prices. Additionally, there is a volume column showing the daily traded volume. Other columns in the dataset will be removed, as they are not relevant to our analysis. We will add new features of interest during the feature engineering process.</p>
+<h2 id="Introduction">Introduction<a class="anchor-link" href="#Introduction">&#182;</a></h2><p>In this project, we aim to build a machine learning model to accurately predict the next day's price of the S&amp;P 500 index. Our data comes from the yfinance library and contains daily stock information dating back to 1927, including opening, high, low, and close prices. Additionally, there is a volume column showing the daily traded volume. Other columns in the dataset will be removed, as they are not relevant to our analysis. We will add new features of interest during the feature engineering process.</p>
 
 </div>
 </div>
@@ -14610,8 +14609,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Results</p>
-<p>Our final model, if used daily since 1990 to decide whether or not to invest in the S&amp;P 500, would have generated a net positive return. The process we followed to achieve these results is outlined below.</p>
+<h2 id="Results">Results<a class="anchor-link" href="#Results">&#182;</a></h2><p>Our final model, if used daily since 1990 to decide whether or not to invest in the S&amp;P 500, would have generated a net positive return. The process we followed to achieve these results is outlined below.</p>
 <p>First, we extracted data from the yfinance library and added several key features. We created a new column called Tomorrow, which represents the closing price of the stock on the following day. We also added a binary column called Target, where a value of 0 indicates that the stock price decreased the next day, and a value of 1 indicates that the price increased. These columns were essential for training our model by providing a clear metric to predict.</p>
 <p>Next, we built a basic model using the predictors described in the introduction. For evaluation, we defined precision score as our error metric, which measures how often we correctly predicted a price increase compared to how often it actually occurred. After establishing this baseline model, I focused on improving it through feature engineering.</p>
 <p>To enhance the model, I introduced new columns that considered rolling averages over various time periods. The goal was to help the algorithm detect market trends, such as sustained increases or decreases, as well as potential market corrections. This improved model performed significantly better than the initial one.</p>

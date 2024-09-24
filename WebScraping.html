@@ -5,53 +5,54 @@
 
 <title>WebScraping</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
-
 <body>
 
   <!-- Home Button -->
   <a href="index.html" class="home-button">Home</a>
   <a href="Data_CleaningNBA.html" class="next-button">Next</a>
-  
-  <!-- Your existing content goes here -->
+   <!-- Your existing content goes here -->
+ 
+ </body>
+ 
 
-</body>
 
 <style type="text/css">
     pre { line-height: 125%; }
     .home-button {
-  display: inline-block;
-  padding: 10px 20px;
-  margin: 10px;
-  background-color: #4CAF50;
-  color: white;
-  text-align: center;
-  text-decoration: none;
-  font-size: 16px;
-  border-radius: 5px;
+ display: inline-block;
+ padding: 10px 20px;
+ margin: 10px;
+ background-color: #4CAF50;
+ color: white;
+ text-align: center;
+ text-decoration: none;
+ font-size: 16px;
+ border-radius: 5px;
 }
 .previous-button, .next-button {
-  display: inline-block;
-  padding: 10px 20px;
-  margin: 10px;
-  background-color: #008CBA; /* You can change this color */
-  color: white;
-  text-align: center;
-  text-decoration: none;
-  font-size: 16px;
-  border-radius: 5px;
+ display: inline-block;
+ padding: 10px 20px;
+ margin: 10px;
+ background-color: #008CBA; /* You can change this color */
+ color: white;
+ text-align: center;
+ text-decoration: none;
+ font-size: 16px;
+ border-radius: 5px;
 }
 
 .previous-button {
-  position: absolute;
-  right: 90px; /* Adjust this value to fine-tune spacing */
-  top: 10px;
+ position: absolute;
+ right: 90px; /* Adjust this value to fine-tune spacing */
+ top: 10px;
 }
 
 .next-button {
-  position: absolute;
-  right: 10px;
-  top: 10px;
+ position: absolute;
+ right: 10px;
+ top: 10px;
 }
+
 td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
 span.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
 td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
@@ -14622,8 +14623,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Introduction</p>
-<p>In this project, I aim to predict NBA MVP candidates using machine learning techniques. The first step involves collecting data from the Basketball-Reference website. This notebook scrapes data for MVP candidates, individual player statistics, and team records from 1991 to 2022. The extracted data is then saved into a CSV file for further analysis.</p>
+<h2 id="Introduction">Introduction<a class="anchor-link" href="#Introduction">&#182;</a></h2><p>In this project, I aim to predict NBA MVP candidates using machine learning techniques. The first step involves collecting data from the Basketball-Reference website. This notebook scrapes data for MVP candidates, individual player statistics, and team records from 1991 to 2022. The extracted data is then saved into a CSV file for further analysis.</p>
 <p>In the second section of the notebook, we clean and preprocess the data, merging it into a single, consolidated CSV file. Finally, the machine learning models are applied in the last section to predict potential MVP candidates.</p>
 
 </div>
@@ -14636,8 +14636,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Results</p>
-<p>Our model was able to predict MVPs with a high degree of accuracy. First, we needed to establish an appropriate error metric to evaluate the model's performance. I chose average precision as the primary metric. This measures how well the algorithm classified the top five players in the MVP race for each year. I selected this metric because the majority of NBA players do not receive MVP votes, so our focus is on accurately predicting the top candidates, not the entire player pool.</p>
+<h2 id="Results">Results<a class="anchor-link" href="#Results">&#182;</a></h2><p>Our model was able to predict MVPs with a high degree of accuracy. First, we needed to establish an appropriate error metric to evaluate the model's performance. I chose average precision as the primary metric. This measures how well the algorithm classified the top five players in the MVP race for each year. I selected this metric because the majority of NBA players do not receive MVP votes, so our focus is on accurately predicting the top candidates, not the entire player pool.</p>
 <p>By comparing the top five predicted players with the actual top five MVP candidates and assigning penalties for each missed player, as well as additional penalties based on how far down the ranking a player was identified, we developed a robust way to evaluate our models.</p>
 <p>The two models compared in this analysis were a linear regression model and a random forest. The linear regression model achieved an average precision score of 0.78, while the random forest performed slightly better with a score of 0.80. This indicates that the random forest model was more effective in predicting the top five MVP candidates.</p>
 

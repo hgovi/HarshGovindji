@@ -4,28 +4,27 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>CreditCardFraud</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
-
- <!-- Home Button -->
- <a href="index.html" class="home-button">Home</a>
+<!-- Home Button -->
+<a href="index.html" class="home-button">Home</a>
  
  
- <!-- Your existing content goes here -->
+<!-- Your existing content goes here -->
 
 </body>
 
 
 <style type="text/css">
-    pre { line-height: 125%; }
-    .home-button {
-  display: inline-block;
-  padding: 10px 20px;
-  margin: 10px;
-  background-color: #4CAF50;
-  color: white;
-  text-align: center;
-  text-decoration: none;
-  font-size: 16px;
-  border-radius: 5px;
+   pre { line-height: 125%; }
+   .home-button {
+ display: inline-block;
+ padding: 10px 20px;
+ margin: 10px;
+ background-color: #4CAF50;
+ color: white;
+ text-align: center;
+ text-decoration: none;
+ font-size: 16px;
+ border-radius: 5px;
 }
 td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
 span.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
@@ -14597,8 +14596,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Introduction</p>
-<p>This project focuses on classifying credit card transactions as either fraudulent or non-fraudulent using machine learning algorithms. The primary objective is to develop a high-performance model capable of accurately predicting fraudulent transactions. The dataset used consists of 284,000 records, with 28 anonymized predictor variables for privacy protection. The target variable, labeled as "Class," is binary: 0 represents non-fraudulent transactions, and 1 represents fraudulent transactions.</p>
+<h3 id="Introduction">Introduction<a class="anchor-link" href="#Introduction">&#182;</a></h3><p>This project focuses on classifying credit card transactions as either fraudulent or non-fraudulent using machine learning algorithms. The primary objective is to develop a high-performance model capable of accurately predicting fraudulent transactions. The dataset used consists of 284,000 records, with 28 anonymized predictor variables for privacy protection. The target variable, labeled as "Class," is binary: 0 represents non-fraudulent transactions, and 1 represents fraudulent transactions.</p>
 
 </div>
 </div>
@@ -14610,8 +14608,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Results</p>
-<p>In this analysis, we implemented several machine learning algorithms to test on our dataset. One key observation was that the dataset was severely imbalanced, with a much higher number of non-fraudulent transactions compared to fraudulent ones. This imbalance resulted in high accuracy for predicting non-fraudulent transactions but poor accuracy for detecting fraudulent ones. To address this, we tested our algorithms on two versions of the dataset: the original imbalanced dataset and a balanced dataset with roughly equal numbers of fraud and non-fraud transactions.</p>
+<h3 id="Results">Results<a class="anchor-link" href="#Results">&#182;</a></h3><p>In this analysis, we implemented several machine learning algorithms to test on our dataset. One key observation was that the dataset was severely imbalanced, with a much higher number of non-fraudulent transactions compared to fraudulent ones. This imbalance resulted in high accuracy for predicting non-fraudulent transactions but poor accuracy for detecting fraudulent ones. To address this, we tested our algorithms on two versions of the dataset: the original imbalanced dataset and a balanced dataset with roughly equal numbers of fraud and non-fraud transactions.</p>
 <p>Before discussing the algorithms, it’s important to define the evaluation metrics used for comparison. We focused on precision, recall, and the F1-score. These metrics were chosen because they are based on the true positive rate, which is critical in fraud detection.</p>
 <p>Precision measures the number of true positives divided by the total positive predictions.
 Recall measures the correct positive predictions divided by all actual positive cases.
@@ -14619,10 +14616,12 @@ F1-score provides a balance between precision and recall.
 For this use case, a high true positive rate is essential to correctly identify fraudulent transactions, while minimizing the false positive rate is equally important to avoid incorrectly flagging legitimate transactions. By optimizing the balance between precision, recall, and the F1-score, we can identify the most suitable algorithm.</p>
 <p>We tested the following algorithms: Logistic Regression, Shallow Neural Network, Random Forest Classifier, Gradient Boosting Classifier, and Linear Support Vector Classifier. These algorithms were applied to both the original imbalanced dataset and the balanced dataset.</p>
 <p>The best-performing algorithm was the Random Forest Classifier applied to the balanced dataset. It achieved:</p>
-<p>Precision of 0.92 for non-fraud and 0.97 for fraud,
-Recall of 0.97 for non-fraud and 0.91 for fraud,
-F1-score of 0.95 for non-fraud and 0.94 for fraud.
-These were the highest overall scores among all the tested algorithms. Another noteworthy algorithm was the Shallow Neural Network applied to the balanced dataset, which yielded slightly lower results.</p>
+<ul>
+<li>Precision of 0.92 for non-fraud and 0.97 for fraud,</li>
+<li>Recall of 0.97 for non-fraud and 0.91 for fraud,</li>
+<li>F1-score of 0.95 for non-fraud and 0.94 for fraud.</li>
+</ul>
+<p>These were the highest overall scores among all the tested algorithms. Another noteworthy algorithm was the Shallow Neural Network applied to the balanced dataset, which yielded slightly lower results. These results can be applied in real-world fraud detection systems to reduce the risk of false positives and negatives, ensuring that fraudulent transactions are accurately detected while minimizing disruption to legitimate users. Additionally, regular retraining of the model on new data is essential to adapt to evolving fraud patterns. To further improve the model, we could explore advanced techniques such as ensemble learning or unsupervised learning methods to detect anomalies in transactions without relying solely on labeled data.</p>
 
 </div>
 </div>
